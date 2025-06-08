@@ -67,6 +67,7 @@ public class AddScheduleActivity extends AppCompatActivity {
 
     private void loadSubjects() {
         String url = "http://10.0.2.2/myproject/get_subjects.php";
+
         StringRequest request = new StringRequest(Request.Method.GET, url,
                 response -> {
                     try {
@@ -109,7 +110,7 @@ public class AddScheduleActivity extends AppCompatActivity {
 
     private void loadTeachers(int subjectId) {
         if (subjectId <= 0) return;
-        String url = "http://10.0.2.2/myproject/get_teachers.php" +
+        String url = "http://10.0.2.2/myproject/get_teachers_by_subject.php" +
                 "?subject_id=" + subjectId;
         StringRequest request = new StringRequest(Request.Method.GET, url,
                 response -> {
