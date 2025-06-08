@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1e2f45">
+
+    <!-- عنوان الصفحة -->
+    <TextView
+        android:id="@+id/txTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Schedule"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"/>
+
+    <!-- البطاقة السفلية -->
+    <LinearLayout
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="553dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/rounded"
+        android:elevation="8dp"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Spinners والنصوص -->
+        <Spinner
+            android:id="@+id/spinner_teacher"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:popupBackground="#FFFFFF" />
+
+        <Spinner
+            android:id="@+id/spinner_class"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:popupBackground="#FFFFFF" />
+
+        <Spinner
+            android:id="@+id/spinner_subject"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:popupBackground="#FFFFFF" />
+
+        <Spinner
+            android:id="@+id/spinner_day"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:popupBackground="#FFFFFF" />
+
+        <!-- حقول الوقت -->
+        <EditText
+            android:id="@+id/edit_start_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#f4f1c9"
+            android:hint="Start Time (HH:MM)"
+            android:inputType="time" />
+
+        <EditText
+            android:id="@+id/edit_end_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#f4f1c9"
+            android:hint="End Time (HH:MM)"
+            android:inputType="time" />
+
+        <!-- زر الإرسال -->
+        <Button
+            android:id="@+id/button_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#1e2f45"
+            android:text="Assign Schedule"
+            android:textColor="#f4f1c9"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>
